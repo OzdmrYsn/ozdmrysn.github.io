@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neos Bank</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="img/atm.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+
+
+
+</head>
+<body>
+<div class="anakutu">
+    <div class="container mt-5 text-white">
+        <div class="row anaekran">
+            <div class="col">
+                <div class="girisekran mt-5">
+                    <p class="text-center">İşlem Seçiniz?</p>
+                    <button class="girisyapbtn mt-5">Giriş Yap</button>
+                    <button class="kartsizislembtn mt-3">Kartsız İşlem</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="kartsizgiris displaynone">
+                    <button class="hesabayatirbtn mb-3">Hesaba Yatır</button>
+                <button class="baskaibanbtn">Başka İBAN</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="girisyapgiris displaynone">
+                <div class="col-12">
+                    <p class="Text-white"><b>Giriş Yapınız</b></p>
+                </div>
+                <div class="col-12">
+                    <div class="alert alert-danger displaynone sifreyanlisalert" role="alert">
+                       <b> Kullanıcı Adı veya Şifre Hatalı!</b>
+                      </div>
+                </div>
+                <div class="col-12">
+                    <input class="inputisim1" type="text" placeholder="Kullanıcı Adınız?">
+                </div>
+                <div class="col-12">
+                    <input class="inputisim2" type="text" placeholder="Şifreniz?">
+                </div>
+                <div class="col-12">
+                    <button class="kullanicisifrebtn">Giriş Yap</button>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="anaekran displaynone">
+                <div class="col-12">
+                    <button class="paracekbtn mb-1">Para Çek</button>
+                </div>
+                <div class="col-12">
+                    <button class="parayatirbtn mb-1">Para Yatır</button>
+                </div>
+                <div class="col-12">
+                    <Button class="havalebtn mb-1">Başka Hesaba Havale</Button>
+                </div>
+                <div class="col-12">
+                    <button class="kredicekbtn mb-1">Kredi Çek</button>
+                </div>
+                <div class="col-12">
+                    <button class="cikisyapbtn mt-5" onclick="document.location.reload(true)";>Çıkış Yap</button>
+                </div>
+            </div>   
+        </div>
+        <div class="row">
+            <div class="girisyapanagiris displaynone">
+                <div class="col-12">
+                    <input class="inputisim1" type="text" placeholder="Kullanıcı Adı?">
+                </div>
+                <div class="col-12">
+                    <input class="inputisim2" type="text" placeholder="Şifreniz?">
+                </div>
+                <div class="col-12">
+                    <button class="bg-danger">Giriş Yap</button>
+            </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="paracekscreen displaynone">
+                <div class="col-12 mt-3">
+                    <p class="bakiyebilgi"></p>
+                </div>
+                <div class="col-12 mt-3">
+                    <input class="inputisim3" type="text" placeholder="Çekmek istediğiniz miktarı giriniz?">
+                </div>
+                <div class="col-12 mt-3">
+                    <button class="paracekscreenbtn">Para Çek</button>
+                    <button class="anasayfabtn mt-3">Ana Sayfa</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="parayatirscreen displaynone">
+                <div class="col-12 mt-3">
+                    <p class="bakiyebilgi2"></p>
+                </div>
+                <div class="col-12 mt-3">
+                    <input class="inputisim4" type="text" placeholder="Yatırmak istediğiniz miktarı giriniz?">
+                </div>
+                <div class="col-12 mt-3">
+                    <button class="parayatirscreenbtn">Para yatır</button>
+                    <button class="anasayfabtn mt-3">Ana Sayfa</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="havalescreen displaynone">
+                <div class="col-12">
+                    <div class="alert alert-danger displaynone hataliibanalert" role="alert">
+                       <b> Hatalı İBAN!</b>
+                      </div>
+                <div class="col-12 mt-3">
+                    <p class="havaleidcheck">Havale yapacağınız kişinin 3 haneli /İBAN Adresini giriniz?</p>
+                </div>
+                <div class="col-12">
+                    <input type="text" class="inputisim5">
+                </div>
+                <div class="col-12 mt-3">
+                    <button class="havaleidonay">Onayla</button>
+                    <button class="anasayfabtn mt-3">Ana Sayfa</button>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="havaleanascreen displaynone">
+                <div class="col-12">
+                    <p class="havaleidcheck2"></p>
+                </div>
+                <div class="col-12">
+                    <input type="text" class="inputisim6" placeholder="Havale yapmak istediğiniz miktarı giriniz?">
+                </div>
+                <div class="col-12 mt-3">
+                    <button class="havaleidonay2">Onayla</button>
+                    <button class="anasayfabtn mt-3">Ana Sayfa</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="krediscreen displaynone">
+                <div class="col-12">
+                    <p class="kreditext">Bilgi için ne kadar kredi istediğinizi yazınız?</p>
+                </div>
+                <div class="col-12">
+                    <input type="text" class="inputisim7" placeholder="Miktarı giriniz?">
+                </div>
+                <div class="col-12 mt-3">
+                    <button class="kredibilgi">Bilgi Alın</button>
+                </div>
+                <div class="col-6 float-start">
+                    <button class="kredionay displaynone">Onayla</button>
+                </div>
+                <div class="col-6 float-end">
+                    <button class="kredired displaynone">Reddet</button>
+                </div>
+                <button class="anasayfabtn mt-3">Ana Sayfa</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="hesabaulasscreen displaynone">
+                <div class="col-12 mb-3">
+                    <input type="text" class="inputisim9" placeholder="Kullanıcı Adı?">
+                </div>
+                <div class="col-12 mb-3">
+                    <input type="text" class="inputisim10" placeholder="Şifreniz?">
+                </div>
+                <div class="col-12 mb-3">
+                    <button class="hesabaulasbtn">Giriş Yap</button>
+                </div>
+                <div class="col-12">
+                    <h1 class="uyari1 displaynone">Kullanıcı Adı veya Şifreniz HATALI!</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="kartsizislemscreen displaynone">
+                <div class="col-12">
+                    <button class="kartsizhesabaulas mb-3">Hesaba Ulaş</button>
+                </div>
+                <div class="col-12">
+                    <button class="kartsizibanaulas">Başka İBAN</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="kartsizibanscreen1 displaynone">
+                <div class="col-12">
+                    <p class="kartsizibantext">İşlem yapacağınız kişinin 3 haneli /İBAN Adresini giriniz?</p>
+                </div>
+                <div class="col-12">
+                    <input type="text" class="inputisim11" placeholder="İBAN Giriniz?">
+                </div>
+                <div class="col-12 mt-3">
+                    <button class="kartsizibanonaybtn">Onayla</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="kartsizibanonayscreen displaynone">
+                <div class="col-12">
+                    <p class="ibanchecktext"></p>
+                </div>
+                <div class="col-12">
+                    <input type="text" class="inputisim15" placeholder="TL giriniz?">
+                </div>
+                <div class="col-12 mt-3">
+                    <button class="kartsizibancheckbtn">Onayla</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<script src="app.js"></script>
+</body>
+</html>
